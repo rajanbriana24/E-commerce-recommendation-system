@@ -1,3 +1,5 @@
+from functools import lru_cache
+
 class RecommendationSystem:
     def __init__(self):
         self.user_item_matrix = None
@@ -5,6 +7,7 @@ class RecommendationSystem:
         self.rmse = None
         self.mae = None
 
+    @lru_cache(maxsize=None)  # Cache results of the fit method
     def fit(self, df):
         # Create a user-item matrix
         self.user_item_matrix = df.pivot_table(index='USERID', columns='PRODUCTID', values='RATING', fill_value=0)
