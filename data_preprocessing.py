@@ -3,10 +3,12 @@ import pandas as pd
 
 def preprocess_sales_data():
     # Connect to Snowflake
+    # Fill in credentials of your account
+
     conn = snowflake.connector.connect(
-        user='briana',
-        password='Ammubibi@2405',
-        account='ktujbjc-idb47285',
+        user='****',
+        password='****',
+        account='****',
         warehouse='COMPUTE_WH',
         database='E_COMMERCE_DATABASE',
         schema='PUBLIC',
