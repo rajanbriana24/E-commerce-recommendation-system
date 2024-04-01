@@ -45,7 +45,8 @@ The project consists of the following files:
    - `calculate_cohort_retention`: Calculates cohort retention rates and behavior patterns over time. Business Perspective: Helps identify successful user acquisition strategies and assess the effectiveness of retention efforts.
 
 6. **Recommendation System**:
-   - `RecommendationSystem`: Implements a recommendation system using collaborative filtering techniques. Methods include fitting the model, making predictions, and recommending top items for users. Business Perspective: Provides personalized product recommendations based on user-item interactions, enhancing the overall shopping experience and driving customer engagement.
+   - `RecommendationSystem`: Implements a recommendation system using collaborative filtering techniques. Methods include fitting the model, making predictions, and recommending top items for users. The recommendation system takes user-item-rating data in the form of a DataFrame `df` and converts it into a user-item matrix. Each row of the matrix represents a user, each column represents an item, and the cells contain the corresponding ratings. Using the user-item matrix, the system computes the similarity between users based on their rating patterns. It calculates the cosine similarity between user vectors, where higher cosine similarity indicates greater similarity in rating patterns between users. To make recommendations for a given user, the system predicts the ratings that the user would give to all items. It achieves this by taking a weighted sum of the ratings given by similar users, where the weights are determined by the cosine similarity scores. Based on the predicted ratings, the system recommends the top-N items with the highest predicted ratings to the user.
+Business Perspective: Provides personalized product recommendations based on user-item interactions, enhancing the overall shopping experience and driving customer engagement.
 
 ## Running the Project
 
