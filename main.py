@@ -17,6 +17,7 @@ def main():
     # Exploratory Data Analysis
     most_rated_products = exploratory_data_analysis.explore_most_rated_products(df)
     most_active_users = exploratory_data_analysis.explore_most_active_users(df)
+    exploratory_data_analysis.explore_most_correlated_variables(df)
 
     # Time Analysis
     time_analysis.analyze_daily_ratings(df)
