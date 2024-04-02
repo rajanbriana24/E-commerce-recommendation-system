@@ -1,4 +1,4 @@
-# Recommendation System with Snowflake
+# Recommendation System with Snowflake and PySpark
 
 This project implements a recommendation system using data stored in a Snowflake database. The recommendation system is designed to provide personalized product recommendations to users based on their historical interactions with the platform. The system utilizes collaborative filtering techniques to analyze user-item interactions and make recommendations.
 
